@@ -450,6 +450,10 @@ class Connection(object):
 
         Non-standard, for internal use; do not use this in your applications.
         """
+        if isinstance(obj, numbers.Integral):
+            return int(obj)
+        if isinstance(obj, numbers.Real):
+            return float(obj)
         if isinstance(obj, str_type):
             return "'" + self.escape_string(obj) + "'"
         if isinstance(obj, (bytes, bytearray)):
