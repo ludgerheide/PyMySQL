@@ -8,6 +8,7 @@ from ._compat import PY2, range_type, text_type, str_type, JYTHON, IRONPYTHON
 import errno
 import io
 import os
+import numbers
 import socket
 import struct
 import sys
